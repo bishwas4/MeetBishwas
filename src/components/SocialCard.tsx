@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
-// Define the SocialPost type here if not exported from "@/data/social"
+
 type SocialPost = {
   platform: "linkedin" | "facebook" | "medium";
   embedUrl: string;
