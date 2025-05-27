@@ -2,7 +2,11 @@
 
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
-import type { SocialPost } from "@/data/social";   // ← named, type‐only import
+// Define the SocialPost type here if not exported from "@/data/social"
+type SocialPost = {
+  platform: "linkedin" | "facebook" | "medium";
+  embedUrl: string;
+};
 
 export default function SocialCard(props: SocialPost) {
   const { platform, embedUrl } = props;
