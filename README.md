@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# minimal-grid-portfolio
 
-## Getting Started
+A **fully customizable**, **community-driven** portfolio starter built with Next.js, Tailwind CSS, Framer Motion, Lottie animations, and React Icons. Fork, customize your data & assets, and launch your own developer portfolio in minutes!
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **Hero** section with Lottie animation
+- **About** section with avatar, bio, fun-fact, skills (linear & radial), tech-stack icons, timeline & testimonials
+- **Projects** grid with images, descriptions & tech badges
+- **Contact** modal powered by EmailJS + floating button
+- **Social** page with styled embed cards for LinkedIn, Medium, Facebook
+- **Light / Dark mode** via next-themes
+- **Responsive** design: mobile → tablet → desktop
+- **Config-driven**: all content lives in simple TypeScript data files
+- **Easy to fork & contribute**: clear CI, issue & PR templates
+
+---
+
+## 📦 Tech Stack
+
+- **Next.js** 14 (App Router)
+- **React & TypeScript**
+- **Tailwind CSS** + shadcn/ui
+- **Framer Motion** for animations
+- **lottie-react** for JSON animations
+- **EmailJS** for contact form
+- **next-themes** for light/dark mode
+- **React Icons** for logos & UI icons
+- **Vercel** (recommended) for deployment
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Fork & Clone
+
+```bash
+# Fork this repo on GitHub, then:
+git clone git@github.com:<YOUR-USERNAME>/minimal-grid-portfolio.git
+cd minimal-grid-portfolio
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set Up Environment
+
+Create a `.env.local` in the project root:
+
+```ini
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_USER_ID=your_user_id
+```
+
+> Obtain these values from your EmailJS dashboard.
+
+### 4. Add Your Assets
+
+- **Avatar:** `public/images/avatar.png`
+- **Resume PDF:** `public/resume.pdf`
+- **Lottie Animations:** `public/animations/*.json`
+- **Project Screenshots:** `public/images/*.png`
+
+### 5. Customize Your Data
+
+Edit the following files under `src/data/`:
+
+- **siteConfig.ts** – name, profession, colors, about (avatar, bio, funFact, resumeUrl, location, languages, skills), projects, contact links
+- **social.ts** – embed URLs for the Social page
+- **techStack.ts** – tech names & icons
+- **timeline.ts** – career milestones
+- **testimonials.ts** – quotes & authors
+
+### 6. Run Locally
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to see your personalized portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📐 Folder Structure
 
-## Learn More
+```
+minimal-grid-portfolio/
+├── public/
+│   ├─ animations/      # Lottie JSON files
+│   ├─ images/          # Avatar, project screenshots
+│   └─ resume.pdf       # Downloadable resume
+├── src/
+│   ├─ app/             # Next.js App Router pages & layout
+│   ├─ components/      # Reusable UI components
+│   ├─ data/            # siteConfig.ts, social.ts, techStack.ts, timeline.ts, testimonials.ts
+│   ├─ styles/          # globals.css (Tailwind imports)
+│   └─ theme/           # theme palettes (optional)
+├── .env.local          # EmailJS credentials
+├── .gitignore
+├── README.md
+└── tailwind.config.js
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Vercel (recommended)
 
-## Deploy on Vercel
+1. Push your fork to GitHub.
+2. Import the repo in Vercel.
+3. Add the same environment variables in Vercel’s dashboard.
+4. Deploy!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Netlify
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Connect your GitHub repo in Netlify.
+2. Set the environment variables.
+3. Deploy command:
+   ```bash
+   npm run build
+   ```
+   Publish directory: `.next`
+
+---
+
+## 🤝 Contributing
+
+1. **Fork** the repo and **clone** locally.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feat/your-feature
+   ```
+3. **Make your changes**, update data modules or assets.
+4. **Commit** with a clear message:
+   ```bash
+   git add .
+   git commit -m "feat: add new testimonial"
+   ```
+5. **Push** and open a Pull Request against `main`.
+6. Use the issue & PR templates in `.github/` to guide your contribution.
+
+---
+
+## 📝 License
+
+Licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+---
+
+## ✉️ Contact
+
+Built by **Your Name**.  
+Questions or feedback? Open an issue or email `your.email@example.com`.
