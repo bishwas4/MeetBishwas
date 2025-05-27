@@ -20,18 +20,20 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
         </p>
         <ul className="flex space-x-4 mt-4 md:mt-0">
-          {(socialLinks as SocialLink[]).map(({ platform, url, Icon }) => (
-            <li key={platform}>
-              <Link
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-emerald-500 transition-colors"
-              >
-                <Icon className="w-5 h-5" />
-              </Link>
-            </li>
-          ))}
+          {(socialLinks as SocialLink[])
+            .filter(link => typeof link.Icon === "function")
+            .map(({ platform, url, Icon }) => (
+              <li key={platform}>
+                <Link
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-emerald-500 transition-colors"
+                >
+                  <Icon className="w-5 h-5" />
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     </footer>
