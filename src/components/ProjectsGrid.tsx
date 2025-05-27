@@ -1,6 +1,7 @@
 // src/components/ProjectsGrid.tsx
 "use client";
 import React from "react";
+import Image from "next/image";
 import { siteConfig, Project } from "@/data/siteConfig";
 
 export default function ProjectsGrid() {
@@ -20,10 +21,13 @@ export default function ProjectsGrid() {
               className="block bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-200 overflow-hidden"
             >
               {image && (
-                <img
+                <Image
                   src={image}
                   alt={title}
+                  width={600}
+                  height={160}
                   className="w-full h-40 object-cover"
+                  style={{ objectFit: "cover" }}
                 />
               )}
               <div className="p-4">

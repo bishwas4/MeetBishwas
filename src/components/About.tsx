@@ -4,7 +4,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { FaTwitter, FaGithub, FaLinkedin } from "react-icons/fa";
 import { siteConfig, Skill } from "@/data/siteConfig";
 import { TimelineEvent } from "@/data/timeline";
 import { socialLinks } from "@/data/socialLinks";
