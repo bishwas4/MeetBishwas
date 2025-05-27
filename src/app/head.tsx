@@ -52,6 +52,10 @@ export default function Head() {
           }),
         }}
       />
+      <meta
+        name="google-site-verification"
+        content="5vJNR36N1Lqpc2HkmbY5p5UaBmlMzQJWFTgxS1Nyc_8"
+      />
     </>
   );
 }
