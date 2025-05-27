@@ -1,22 +1,24 @@
-// src/data/social.ts
-
-export type SocialPlatform = "linkedin" | "medium" | "facebook";
-
-export interface SocialPost {
-  platform: SocialPlatform;
-  embedUrl: string;
-}
-
 export const socialPosts: SocialPost[] = [
   {
     platform: "linkedin",
     embedUrl:
-      "https://www.linkedin.com/embed/feed/update/urn:li:share:1234567890123456789",
+      "https://www.linkedin.com/embed/feed/update/urn:li:share:7260572382556217344?collapsed=1",
+      
+  },
+  {
+    platform: "linkedin",
+    embedUrl:
+      "https://www.linkedin.com/embed/feed/update/urn:li:share:7259786105351266304?collapsed=1",
   },
   {
     platform: "medium",
     embedUrl:
-      "https://medium.com/media/abcdef1234567890/embed.html",
+      "https://medium.com/@bishwastmgr/javascript-slice-vs-splice-a-tale-of-two-array-wizards-5d6cab248e2e",
+  },
+  {
+    platform: "medium",
+    embedUrl:
+      "https://medium.com/@bishwastmgr/why-javascripts-string-to-number-conversion-is-confusing-and-a-little-fun-62a104d90832",
   },
   {
     platform: "facebook",

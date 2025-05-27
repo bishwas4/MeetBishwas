@@ -8,7 +8,7 @@ export interface SocialLink {
 }
 
 export const socialLinks: SocialLink[] = [
-  { platform: "twitter",  url: "https://twitter.com/…", Icon: FaTwitter },
-  { platform: "github",   url: "https://github.com/…", Icon: FaGithub },
-  { platform: "linkedin", url: "https://linkedin.com/…", Icon: FaLinkedin },
+  { platform: "twitter",  url: "https://twitter.com/Bishwastmgr", Icon: FaTwitter },
+  { platform: "github",   url: "https://github.com/bishwasmgr", Icon: FaGithub },
+  { platform: "linkedin", url: "https://www.linkedin.com/in/bishwastmgr", Icon: FaLinkedin },
 ];

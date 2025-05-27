@@ -1,4 +1,5 @@
 // src/data/siteConfig.ts
+
 export interface Skill {
   name: string;
   level: number; // 0–100
@@ -12,63 +13,98 @@ export interface Project {
   link?: string;
 }
 
-export const siteConfig = {
-  name: "Your Name",
-  profession: "AI Engineer",
-  animation: "your-lottie-file.json",
+export interface SiteConfig {
+  name: string;
+  profession: string;
+  animation: string;
+  colors: {
+    primary: string;
+    accent: string;
+  };
+  sections: readonly string[];
+  about: {
+    title: string;
+    avatar: string;
+    description: string;
+    funFact: string;
+    resumeUrl: string;
+    location: string;
+    languages: string[];
+    skills: Skill[];
+  };
+  projects: Project[];
+  contact: {
+    email: string;
+    linkedin: string;
+    github: string;
+  };
+}
+
+export const siteConfig: SiteConfig = {
+  name: "Bishwas Thapa Magar",
+  profession: "Software Engineer & AI Developer",
+  animation: "ai-engineer.json",  // your Lottie file in public/animations
   colors: {
     primary: "bg-slate-800",
     accent: "text-emerald-400",
   },
-  sections: ["Hero", "About", "Projects", "Contact"] as const,
+  sections: ["Hero", "About", "Projects", "Social", "Contact"] as const,
 
   about: {
     title: "About Me",
     avatar: "/images/avatar.png",
     description: `
-I’m Your Name, an AI Engineer who loves building 
-data-driven applications and experimenting with machine learning models.
+Highly motivated recent graduate with a Master's degree in Information Technology 
+(specializing in Software Engineering) from Charles Darwin University. Experienced in 
+software development, automated testing, cloud services, and data analytics. Passionate 
+about cloud technologies and eager to leverage strong analytical and technical skills 
+in a software or cloud engineering role.
     `.trim(),
-    funFact: "I build drones on weekends.",
+    funFact: "I love singing karaoke and exploring new technologies in my free time.",
     resumeUrl: "/resume.pdf",
-    location: "Darwin, NT, Australia",
-    languages: ["English", "Nepali"], 
+    location: "Darwin City, NT, 0800",
+    languages: ["English"], 
     skills: [
       { name: "Python", level: 90 },
-      { name: "TensorFlow", level: 80 },
-      { name: "Next.js", level: 85 },
-      { name: "Docker", level: 75 },
-    ] as Skill[],
+      { name: "Ruby", level: 80 },
+      { name: "JavaScript", level: 85 },
+      { name: "React", level: 80 },
+      { name: "AWS", level: 75 },
+      { name: "Docker", level: 70 },
+      { name: "Kubernetes", level: 65 },
+    ],
   },
 
   projects: [
     {
-      title: "AI Chatbot Dashboard",
-      description: "A real-time dashboard for monitoring chatbot interactions, built with Next.js and WebSockets.",
-      tech: ["Next.js", "Socket.io", "Chart.js"],
-      image: "/images/chatbot-dashboard.png",
-      link: "https://github.com/your-username/ai-chatbot-dashboard",
+      title: "Cloud-based Tax Calculator",
+      description:
+        "Developed and deployed a scalable tax calculator web application using Ruby on Rails, React, and AWS cloud services.",
+      tech: ["Rails", "React", "AWS"],
+      image: "/images/cloud-tax-calculator.png",
+      link: "https://austratax.com.au",
     },
     {
-      title: "Image Classifier API",
-      description: "A REST API for image classification using TensorFlow.js, deployed in Docker containers.",
-      tech: ["Node.js", "TensorFlow.js", "Docker"],
-      image: "/images/image-classifier.png",
-      link: "https://github.com/your-username/image-classifier-api",
+      title: "LeaveLogic",
+      description:
+        "Leave planning software as personal as your people",
+      tech: ["Ruby on Rails", "React", "ASW"],
+      image: "/images/image1.png",
+      link: "https://https://leavelogic.com/",
     },
     {
-      title: "Portfolio Starter",
-      description: "This very portfolio template—fully themable, community-driven, and built with Next.js + Lottie.",
-      tech: ["Next.js", "Tailwind CSS", "Lottie"],
-      image: "/images/portfolio-starter.png",
-      link: "https://github.com/your-username/minimal-grid-portfolio",
+      title: "Vendor Risk Management",
+      description:
+        "Designed and implemented a software tool for managing and analyzing vendor risks using automated workflows.",
+      tech: ["React", "Node.js", "Cypress"],
+      image: "/images/image2.png",
+      link: "https://github.com/bishwasmgr/vendor-risk-management",
     },
-    // …add more here
-  ] as Project[],
+  ],
 
   contact: {
-    email: "you@domain.com",
-    linkedin: "https://linkedin.com/in/your-profile",
-    github: "https://github.com/your-username",
+    email: "bishwastmgr@gmail.com",
+    linkedin: "https://linkedin.com/in/bishwastmgr",
+    github: "https://github.com/bishwasmgr",
   },
 };

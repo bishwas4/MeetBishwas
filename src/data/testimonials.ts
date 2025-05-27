@@ -5,11 +5,11 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Working with [Your Name] was a game-changer. Their insights into AI significantly boosted our project's success.",
-    author: "Jane Doe, CTO at ExampleCorp",
+    quote: "Bishwas's expertise on the LeaveLogic project at Codyssey Web Nepal—working under Whitehat Engineering—was instrumental in catching critical issues early and ensuring a rock-solid release. His meticulous testing with Cypress, Ruby RSpec, and Cucumber saved us countless hours and dramatically improved product quality.",
+    author: "Bryan Starbuck, Founder at Whitehat Engineering",
   },
   {
-    quote: "A true professional and creative thinker—delivered beyond expectations every time.",
-    author: "John Smith, Project Manager at WebSolutions",
+    quote: "As Co-founder and Business Systems Analyst at NeuralLab, I watched Bishwas seamlessly bridge complex technical requirements with business needs. His analytical rigor and proactive problem-solving on our AI dashboard project propelled us forward faster than anticipated.",
+    author: "Bennett, Co-founder & Business Systems Analyst at NeuralLab",
   },
 ];

@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 z-50 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between p-4">
-        <span className="font-bold text-xl">YourName</span>
+        <span className="font-bold text-xl">MeetBishwas</span>
         <ul className="flex space-x-6">
           {navItems.map(({ label, id }) => (
             <li key={id}>

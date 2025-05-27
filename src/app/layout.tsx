@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <FloatingContactButton />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

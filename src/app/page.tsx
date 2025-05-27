@@ -5,7 +5,7 @@ import ContactForm from "@/components/ContactForm";
 export default function Home() {
   return (
   <>
-    <title>Your Name – AI Engineer</title>
+    <title>MeetBishwas – AI Engineer</title>
       <meta name="description" content="Portfolio of Your Name, AI Engineer." />
       <meta property="og:title" content="Your Name – AI Engineer" />
       <meta property="og:description" content="Building AI-powered web apps." />
