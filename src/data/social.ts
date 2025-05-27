@@ -1,7 +1,9 @@
 // src/data/social.ts
 
 // 1) The platforms we support
-export type SocialPlatform = "linkedin" | "medium" | "facebook";
+export type SocialPlatform = typeof socialPlatforms[number];
+
+export const socialPlatforms = ["linkedin", "medium", "facebook"] as const;
 
 // 2) Export the SocialPost shape
 export interface SocialPost {

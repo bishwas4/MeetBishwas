@@ -2,10 +2,10 @@
 
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
-import { SocialPost } from "@/data/social";
+import type { SocialPost } from "@/data/social";   // ← named, type‐only import
 
-export default function SocialCard({ platform, embedUrl }: SocialPost) {
-  // Pick the right icon (Medium has no icon here)
+export default function SocialCard(props: SocialPost) {
+  const { platform, embedUrl } = props;
   const Icon =
     platform === "linkedin"
       ? FaLinkedin
@@ -15,13 +15,10 @@ export default function SocialCard({ platform, embedUrl }: SocialPost) {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-      {/* Header */}
       <div className="flex items-center px-4 py-2 border-b dark:border-gray-700">
         {Icon && <Icon className="text-emerald-500 mr-2 w-5 h-5" />}
         <h3 className="font-medium capitalize">{platform}</h3>
       </div>
-
-      {/* Embed */}
       <div className="p-4">
         {platform === "medium" ? (
           <blockquote className="medium-widget">
@@ -40,5 +37,5 @@ export default function SocialCard({ platform, embedUrl }: SocialPost) {
         )}
       </div>
     </div>
-);
+  );
 }
