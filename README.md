@@ -161,4 +161,4 @@ Licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 ## ✉️ Contact
 
 Built by **Your Name**.  
-Questions or feedback? Open an issue or email `your.email@example.com`.
+Questions or feedback? Open an issue or email `bishwastmgr@gmail.com`.
