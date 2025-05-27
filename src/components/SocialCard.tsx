@@ -2,14 +2,12 @@
 
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { socialPosts } from "@/data/social";
 
-type SocialPost = {
-  platform: "linkedin" | "facebook" | "medium";
-  embedUrl: string;
-};
+// Derive SocialPost type from the data array:
+type SocialPost = (typeof socialPosts)[number];
 
-export default function SocialCard(props: SocialPost) {
-  const { platform, embedUrl } = props;
+export default function SocialCard({ platform, embedUrl }: SocialPost) {
   const Icon =
     platform === "linkedin"
       ? FaLinkedin
