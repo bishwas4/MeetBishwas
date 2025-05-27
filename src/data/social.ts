@@ -1,13 +1,15 @@
 // src/data/social.ts
 
-export const socialPlatforms = ["linkedin", "medium", "facebook"] as const;
-export type SocialPlatform = typeof socialPlatforms[number];
+// 1) The platforms we support
+export type SocialPlatform = "linkedin" | "medium" | "facebook";
 
+// 2) Export the SocialPost shape
 export interface SocialPost {
   platform: SocialPlatform;
   embedUrl: string;
 }
 
+// 3) Your actual posts
 export const socialPosts: SocialPost[] = [
   {
     platform: "linkedin",

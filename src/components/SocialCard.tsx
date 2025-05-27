@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
-import type { SocialPost } from "@/data/social";
+import { SocialPost } from "@/data/social";
 
 export default function SocialCard({ platform, embedUrl }: SocialPost) {
   // Pick the right icon (Medium has no icon here)
