@@ -1,9 +1,18 @@
+// src/data/social.ts
+
+export const socialPlatforms = ["linkedin", "medium", "facebook"] as const;
+export type SocialPlatform = typeof socialPlatforms[number];
+
+export interface SocialPost {
+  platform: SocialPlatform;
+  embedUrl: string;
+}
+
 export const socialPosts: SocialPost[] = [
   {
     platform: "linkedin",
     embedUrl:
       "https://www.linkedin.com/embed/feed/update/urn:li:share:7260572382556217344?collapsed=1",
-      
   },
   {
     platform: "linkedin",
