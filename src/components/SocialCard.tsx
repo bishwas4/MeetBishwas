@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
-import { SocialPost } from "@/data/social";
+import type { SocialPost } from "@/data/social";
 
 export default function SocialCard({ platform, embedUrl }: SocialPost) {
   // Pick the right icon (Medium has no icon here)
@@ -15,21 +15,19 @@ export default function SocialCard({ platform, embedUrl }: SocialPost) {
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-      {/* Header bar */}
+      {/* Header */}
       <div className="flex items-center px-4 py-2 border-b dark:border-gray-700">
-        {Icon && <Icon size={20} className="text-emerald-500 mr-2" />}
+        {Icon && <Icon className="text-emerald-500 mr-2 w-5 h-5" />}
         <h3 className="font-medium capitalize">{platform}</h3>
       </div>
 
       {/* Embed */}
       <div className="p-4">
         {platform === "medium" ? (
-          // Medium’s own embed widget
           <blockquote className="medium-widget">
             <a href={embedUrl}></a>
           </blockquote>
         ) : (
-          // LinkedIn & Facebook as iframes
           <div className="relative" style={{ paddingTop: "56.25%" }}>
             <iframe
               src={embedUrl}
@@ -42,5 +40,5 @@ export default function SocialCard({ platform, embedUrl }: SocialPost) {
         )}
       </div>
     </div>
-  );
+);
 }

@@ -1,4 +1,5 @@
-// this can be a Server Component
+"use client";
+
 import React from "react";
 import Script from "next/script";
 import SocialCard from "@/components/SocialCard";
@@ -7,7 +8,7 @@ import { socialPosts } from "@/data/social";
 export default function SocialPage() {
   return (
     <main className="min-h-screen bg-gray-900 text-white py-16">
-      {/* Load Medium’s embed script as soon as possible */}
+      {/* Medium’s embed script */}
       <Script
         src="https://medium.com/embed.js"
         strategy="afterInteractive"
