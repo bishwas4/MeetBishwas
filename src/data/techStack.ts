@@ -1,16 +1,11 @@
 // src/data/techStack.ts
-import {
-  SiReact,
-  SiNodedotjs,
-  SiPython,
-  SiTensorflow,
-  SiNextdotjs,
-} from "react-icons/si";
-import type { SVGProps } from "react";
+
+import type { IconType } from "react-icons";
+import { SiReact, SiNodedotjs, SiPython, SiTensorflow, SiNextdotjs } from "react-icons/si";
 
 export interface TechItem {
   name: string;
-  Icon: React.ComponentType<SVGProps<SVGSVGElement>>;
+  Icon: IconType;
 }
 
 export const techStack: TechItem[] = [
