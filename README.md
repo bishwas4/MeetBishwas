@@ -1,5 +1,7 @@
 # minimal-grid-portfolio
 
+🔗 Live Demo: https://vercel.com/bishwas-thapa-magars-projects/minimal-grid-portfolio/8ir2qT16QiQUeUzZFgqGjdJ4aCqb
+
 A **fully customizable**, **community-driven** portfolio starter built with Next.js, Tailwind CSS, Framer Motion, Lottie animations, and React Icons. Fork, customize your data & assets, and launch your own developer portfolio in minutes!
 
 ---
