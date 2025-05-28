@@ -16,10 +16,8 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  // await params before using
-  const { slug } = await params;
-  const { meta } = await getPostBySlug(slug);
-
+  // params.slug is a string—no need to await it
+  const { meta } = await getPostBySlug(params.slug);
   return {
     title: `${meta.title} – Blog`,
     description: meta.description,
@@ -31,10 +29,8 @@ export default async function BlogPost({
 }: {
   params: { slug: string };
 }) {
-  // await params before using
-  const { slug } = await params;
-  const { meta, content } = await getPostBySlug(slug);
-
+  // params.slug is safe to use directly
+  const { meta, content } = await getPostBySlug(params.slug);
   if (!meta) notFound();
 
   return (

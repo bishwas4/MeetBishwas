@@ -11,8 +11,6 @@ export const metadata = {
 export default function BlogLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      {/* Keep the same navbar */}
-      <Navbar />
 
       {/* Blog section header */}
       <header className="bg-slate-800 border-b border-gray-700">
