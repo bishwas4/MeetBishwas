@@ -55,6 +55,14 @@ export default function Navbar() {
               Social
             </Link>
           </li>
+          <li>
+            <Link
+              href="/blog"
+              className="hover:text-emerald-500 transition-colors"
+            >
+              Blog
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

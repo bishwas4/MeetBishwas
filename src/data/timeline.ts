@@ -18,12 +18,6 @@ export const TimelineEvent: TimelineEvent[] = [
       "Neural Lab, Darwin, NT – Conducted requirement analysis, documentation, and translated business needs into software solutions using Agile methodologies.",
   },
   {
-    date: "Mar 2024 – Present",
-    title: "Customer Service Representative",
-    description:
-      "Bet365, Darwin, NT – Enhanced customer satisfaction through technical troubleshooting, account management, and effective issue resolution.",
-  },
-  {
     date: "2024",
     title: "Master of Information Technology (Software Engineering)",
     description:
